@@ -12,7 +12,6 @@ export default function LoginPage() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-base">
-      <div className="text-24pt">로그인 페이지</div> 
       <Button text="로그인" onClick={handleLogin} />
     </div>
   );
