@@ -1,14 +1,17 @@
-'use client'
+"use client";
 import BackButton from "@/components/atom/BackBotton";
 import PageTitle from "@/components/atom/PageTitle";
 import SenarioItem from "@/components/molecule/SenarioItem";
 import { scenarios } from "@/constants/category";
 import { useParams } from "next/navigation";
+import { useMemo } from "react";
 
 export default function CategoryPage() {
   const { category } = useParams();
-  // const categoryItems = scenarios.get(category);
-  const categoryItems = scenarios["biology"];
+  const categoryItems = useMemo(() => {
+    return scenarios[category as string];
+  }, [scenarios]);
+  // const categoryItems = scenarios["biology"];
 
   return (
     <div className="w-screen h-screen flex flex-col items-center bg-base font-noto">
@@ -25,8 +28,10 @@ export default function CategoryPage() {
             src={`/icon/${chapter.id}.png`} // 아이콘 경로 설정
             title={chapter.title}
             // progress={50} // progress 값 임시 설정 (필요 시 변경)
-            onClick={() => alert(`Navigating to ${chapter.title}`)} progress={0}          />
-          ))}
+            onClick={() => alert(`Navigating to ${chapter.title}`)}
+            progress={0}
+          />
+        ))}
       </div>
     </div>
   );

@@ -11,10 +11,9 @@ export default function MyLibrary() {
 
   const goCategory = (category: string) => {
     if (category !== "biology") {
-      category = "error";
-      router.push(`/${category}`);
+      router.push(`/error`);
     } else {
-    router.push(`/mylibrary/${category}`);
+      router.push(`/mylibrary/${category}`);
     }
   };
 
