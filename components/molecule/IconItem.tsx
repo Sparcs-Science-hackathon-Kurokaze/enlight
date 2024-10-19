@@ -10,7 +10,7 @@ export default function IconItem({ src, title, onClick }: IconProps) {
   return (
     <div onClick={onClick}>
       <Icon src={src}></Icon>
-      <div className="text-point">{title}</div>
+      <div className="text-point font-sans">{title}</div>
     </div>
   );
 }
