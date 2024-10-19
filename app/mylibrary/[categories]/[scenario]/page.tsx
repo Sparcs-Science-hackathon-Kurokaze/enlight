@@ -1,4 +1,5 @@
 "use client";
+import BackButton from "@/components/atom/BackBotton";
 import Book from "@/components/atom/Book";
 import PageTitle from "@/components/atom/PageTitle";
 import { scenarios } from "@/constants/category";
@@ -14,6 +15,9 @@ export default function ScenarioPage() {
 
   return (
     <div className="w-screen h-screen flex flex-col items-center bg-base font-sans">
+      <div className="absolute top-6 left-6">
+        <BackButton />
+      </div>
       <div className="py-[140px]">
         <PageTitle title={scenarioItem.title} />
       </div>

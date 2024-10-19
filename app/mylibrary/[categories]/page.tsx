@@ -1,4 +1,5 @@
 'use client'
+import BackButton from "@/components/atom/BackBotton";
 import PageTitle from "@/components/atom/PageTitle";
 import SenarioItem from "@/components/molecule/SenarioItem";
 import { scenarios } from "@/constants/category";
@@ -11,6 +12,9 @@ export default function CategoryPage() {
 
   return (
     <div className="w-screen h-screen flex flex-col items-center bg-base font-noto">
+      <div className="absolute top-6 left-6">
+        <BackButton />
+      </div>
       <div className="py-[100px]">
         <PageTitle title={"생물학"} />
       </div>
