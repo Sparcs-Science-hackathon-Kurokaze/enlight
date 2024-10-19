@@ -8,9 +8,9 @@ type IconProps = {
 
 export default function IconItem({ src, title, onClick }: IconProps) {
   return (
-    <div onClick={onClick}>
+    <div onClick={onClick} className="flex flex-col items-center">
       <Icon src={src}></Icon>
-      <div className="text-point font-noto mt-2 text-32pt font-bold">{title}</div>
+      <div className="text-point w-[150px] font-noto mt-2 text-32pt font-bold">{title}</div>
     </div>
   );
 }
