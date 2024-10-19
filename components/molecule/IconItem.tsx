@@ -3,11 +3,12 @@ import Icon from "../atom/Icon";
 type IconProps = {
   src: string;
   title: string;
+  onClick?: () => void;
 };
 
-export default function IconItem({ src, title }: IconProps) {
+export default function IconItem({ src, title, onClick }: IconProps) {
   return (
-    <div>
+    <div onClick={onClick}>
       <Icon src={src}></Icon>
       <div className="text-point">{title}</div>
     </div>
