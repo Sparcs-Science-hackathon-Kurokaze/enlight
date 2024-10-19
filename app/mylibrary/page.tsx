@@ -1,3 +1,3 @@
 export default function MyLibrary() {
-  return <div className="">MyLibrary</div>;
+  return <div className="font-sans text-24pt">MyLibrary</div>;
 }
