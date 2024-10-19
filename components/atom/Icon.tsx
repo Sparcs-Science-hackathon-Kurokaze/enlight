@@ -5,7 +5,7 @@ type IconProps = {
 export default function Icon({ src }: IconProps) {
   return (
     <div>
-      <img className="rounded-full bg-whi" src={src}></img>
+      <img  className="rounded-full bg-white p-4" src={src}></img>
     </div>
   );
 }
