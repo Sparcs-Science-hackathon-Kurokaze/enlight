@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <div className="flex justify-center items-center min-h-screen space-x-4 bg-base">
-      <img src="/logo.png" alt="App Logo" className="w-40 h-40" />
+      <img src="/logo.png" alt="App Logo" className="w-60 h-60" />
     </div>
   );
 }
