@@ -12,7 +12,7 @@ export default function MyLibrary() {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center bg-base font-sans bg-base">
+    <div className="w-screen h-screen flex flex-col items-center bg-base font-noto bg-base">
       <div className="py-[100px]">
         <PageTitle title="내 서재" />
       </div>
