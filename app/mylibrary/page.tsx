@@ -8,7 +8,7 @@ export default function MyLibrary() {
   const router = useRouter();
 
   const goCategory = (category: string) => {
-    router.push(`./${category}`);
+    router.push(`/mylibrary/${category}`);
   };
 
   return (
