@@ -12,13 +12,20 @@ export default function MyLibrary() {
   };
 
   return (
-    <div className="flex flex-col items-center bg-base font-sans bg-base">
+    <div className="w-screen h-screen flex flex-col items-center bg-base font-sans bg-base">
       <div className="py-[100px]">
-        <PageTitle title="내 서재"/>
+        <PageTitle title="내 서재" />
       </div>
       <div className="grid grid-cols-4 gap-[50px] text-center">
         {Object.entries(categories).map(([key, value], i) => {
-          return <IconItem key={i} src={`/icon/${key}.svg`} title={value} />;
+          return (
+            <IconItem
+              key={i}
+              src={`/icon/${key}.svg`}
+              title={value}
+              onClick={() => goCategory(key)}
+            />
+          );
         })}
       </div>
     </div>
