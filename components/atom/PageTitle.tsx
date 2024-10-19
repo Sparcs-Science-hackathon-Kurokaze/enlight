@@ -2,5 +2,5 @@ type PageTitleProps = {
   title: string;
 };
 export default function PageTitle({ title }: PageTitleProps) {
-  return <div className="text-5xl text-point">{title}</div>;
+  return <div className="text-point font-noto mt-2 text-40pt font-bold">{title}</div>;
 }

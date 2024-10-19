@@ -16,7 +16,7 @@ export default function MyLibrary() {
       <div className="py-[100px]">
         <PageTitle title="내 서재" />
       </div>
-      <div className="grid grid-cols-4 gap-[50px] text-center">
+      <div className="grid grid-cols-4 gap-[30px] text-center">
         {Object.entries(categories).map(([key, value], i) => {
           return (
             <IconItem

@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        noto: ['NotoSansKR-Bold', 'sans-serif'], // 사용자 정의 폰트 패밀리
+        noto: ['NotoSansKR-ExtraBold', 'sans-serif'], // 사용자 정의 폰트 패밀리
       },
       fontSize: {
         '24pt': '1.5rem',  // 24pt에 해당 (약 1.5rem, 24px)
