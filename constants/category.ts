@@ -13,6 +13,7 @@ interface Scenario {
     id: number;
     title: string;
     chapters: string[];
+    progress: number;
 }
 
 export const scenarios: Record<string, Scenario[]> = {
@@ -27,47 +28,14 @@ export const scenarios: Record<string, Scenario[]> = {
                 '대멸종과 쥬라기 월드',
                 '대공룡시대, 백악기',
                 '바이바이, 공룡'
-            ]
+            ],
+            progress: 100,
         },
         {
             id: 1,
             title: "바이러스와 박테리아",
-            chapters: []
+            chapters: [],
+            progress: 0,
         },
-        {
-          id: 0,
-          title: "중생대 동물과 공룡",
-          chapters: [
-              '중생대란 무엇일까?',
-              '트라이아스기의 번성',
-              '익룡과 수장룡들',
-              '대멸종과 쥬라기 월드',
-              '대공룡시대, 백악기',
-              '바이바이, 공룡'
-          ]
-      },
-      {
-          id: 1,
-          title: "바이러스와 박테리아",
-          chapters: []
-      },
-      {
-        id: 0,
-        title: "중생대 동물과 공룡",
-        chapters: [
-            '중생대란 무엇일까?',
-            '트라이아스기의 번성',
-            '익룡과 수장룡들',
-            '대멸종과 쥬라기 월드',
-            '대공룡시대, 백악기',
-            '바이바이, 공룡'
-        ]
-    },
-    {
-        id: 1,
-        title: "바이러스와 박테리아",
-        chapters: []
-    },
-
-    ]
+       ]
 }
