@@ -3,15 +3,26 @@ import BackButton from "@/components/atom/BackBotton";
 import Book from "@/components/atom/Book";
 import PageTitle from "@/components/atom/PageTitle";
 import { scenarios } from "@/constants/category";
-import { useParams } from "next/navigation";
-import { useMemo } from "react";
+import { useParams, useRouter } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 
 export default function ScenarioPage() {
+  const router = useRouter();
   const { category, scenario: scenarioId } = useParams();
 
   const scenarioItem = useMemo(() => {
     return scenarios[category as string][parseInt(scenarioId as string)];
   }, [scenarioId]);
+
+  const goChapter = (chapter: string) => {
+    router.push(`/mylibrary/${category}/${scenarioId}/${chapter}`);
+  };
+
+  const [storeChapter, setStoreChapter] = useState(0);
+  useEffect(() => {
+    const store = localStorage.getItem(`${category}/${scenarioId}`);
+    setStoreChapter(parseInt(store ?? "0"));
+  }, []);
 
   return (
     <div className="w-screen h-screen flex flex-col items-center bg-base font-sans">
@@ -23,8 +34,17 @@ export default function ScenarioPage() {
       </div>
       <div className="flex flex-col gap-1">
         {scenarioItem.chapters.map((chapter, i) => {
-          console.log(i > 2)
-          return <Book key={i} number={i + 1} title={chapter} isClear={ i < 3}></Book>;
+          return (
+            <Book
+              onClick={() => {
+                goChapter(`${i}`);
+              }}
+              key={i}
+              number={i + 1}
+              title={chapter}
+              isClear={i < storeChapter}
+            ></Book>
+          );
         })}
       </div>
     </div>

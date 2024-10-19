@@ -19,15 +19,11 @@ export default function ChapterPage() {
   const pageRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const toNextPage = useCallback(() => {
-    setCurrent((prev) => {
-      const next = prev + 1;
-      if (next === dinoChapter.length) {
-        router.push(`/mylibrary/${category}/${scenarioId}/${chapter}/quiz`);
-        return prev;
-      }
-      return next;
-    });
-  }, [pageRefs]);
+    if (current + 1 === dinoChapter.length) {
+      router.push(`/mylibrary/${category}/${scenarioId}/${chapter}/quiz`);
+    }
+    setCurrent((prev) => prev + 1);
+  }, [pageRefs, current]);
 
   const pages = useMemo(
     () => dinoChapter.filter((_, i) => i <= current),

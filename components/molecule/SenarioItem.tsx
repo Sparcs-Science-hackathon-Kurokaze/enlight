@@ -21,7 +21,7 @@ type SenarioProps = {
         {/* TODO: Progress Bar */}
         <div className="w-full h-4 bg-gray-200 rounded-b-lg">
           <div
-              className="h-full bg-point transition-all duration-300"
+              className="bg-point transition-all duration-300 h-1"
               style={{ width: `${progress}%` }}
           ></div>
         </div>

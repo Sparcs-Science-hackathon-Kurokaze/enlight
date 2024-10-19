@@ -1,4 +1,4 @@
-export const categories = {
+export const categories: Record<string, string> = {
     physics: "물리",
     chemistry: "화학",
     biology: "생명과학",
@@ -37,5 +37,5 @@ export const scenarios: Record<string, Scenario[]> = {
             chapters: [],
             progress: 0,
         },
-       ]
+    ]
 }

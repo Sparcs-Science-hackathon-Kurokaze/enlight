@@ -8,7 +8,15 @@ import { useParams, useRouter } from "next/navigation"; // 뒤로 가기를 위�
 const alphabet = ["A", "B", "C", "D"];
 
 // 해석을 위한 Modal 컴포넌트
-const Modal = ({ isVisible, onClose, explanation }: { isVisible: boolean; onClose: () => void; explanation: string }) => {
+const Modal = ({
+  isVisible,
+  onClose,
+  explanation,
+}: {
+  isVisible: boolean;
+  onClose: () => void;
+  explanation: string;
+}) => {
   if (!isVisible) return null;
 
   return (
@@ -42,7 +50,18 @@ export default function QuizPage() {
   const { category, scenario: scenarioId, chapter } = useParams();
   const handleFinish = useCallback(() => {
     // router.back(); // 뒤로 가기
-    router.replace(`/mylibrary/${category}/${scenarioId}`)
+    const intChapter = parseInt(chapter as string);
+    const storeChapter = localStorage.getItem(`${category}/${scenarioId}`);
+    const key = `${category}/${scenarioId}`;
+    if (storeChapter) {
+      const intStoreChapter = parseInt(storeChapter);
+      if (intStoreChapter < intChapter) {
+        localStorage.setItem(key, `${intChapter + 1}`);
+      }
+    } else {
+      localStorage.setItem(key, `${intChapter + 1}`);
+    }
+    router.replace(`/mylibrary/${category}/${scenarioId}`);
   }, [router]);
 
   return (
@@ -93,8 +112,11 @@ export default function QuizPage() {
         />
       </div>
       {/* 모달에 quiz의 해석 전달 */}
-      <Modal isVisible={showModal} onClose={handleCloseModal} explanation={quiz.explanation} />
+      <Modal
+        isVisible={showModal}
+        onClose={handleCloseModal}
+        explanation={quiz.explanation}
+      />
     </div>
   );
 }
-
