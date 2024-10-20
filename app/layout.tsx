@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { MessagesProvider } from "@/utils/MessageProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,11 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased h-screen`}
-      >
-        {children}
-      </body>
+      <body className={`antialiased h-screen`}>{children}</body>
     </html>
   );
 }

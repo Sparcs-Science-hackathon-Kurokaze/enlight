@@ -2,8 +2,11 @@
 import Button from "@/components/atom/Button";
 import PageTitle from "@/components/atom/PageTitle";
 import { dinoQuiz } from "@/constants/quiz";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useParams, useRouter } from "next/navigation"; // 뒤로 가기를 위한 useRouter
+import { sendMessage } from "@/utils/sendMessage";
+import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
+import { dinoChapter } from "@/constants/chapter";
 
 const alphabet = ["A", "B", "C", "D"];
 
@@ -34,6 +37,25 @@ export default function QuizPage() {
   const [showModal, setShowModal] = useState<boolean>(false); // 모달 상태
   const router = useRouter(); // 뒤로 가기를 위한 라우터
 
+  const { category, scenario: scenarioId, chapter } = useParams();
+  const pages = useMemo(() => dinoChapter[parseInt(chapter as "0")], [chapter]);
+
+  useEffect(() => {
+    (async () => {
+      const systemMessage: ChatCompletionMessageParam = {
+        role: "system",
+        content: "너는 과학을 문제를 제시하는 전문가야. ",
+      };
+
+      const newMessage: ChatCompletionMessageParam = {
+        role: "user",
+        content: JSON.stringify(pages),
+      };
+      const message = await sendMessage([systemMessage, newMessage]);
+      console.log(message);
+    })();
+  },[pages]);
+
   const handleSubmit = useCallback(() => {
     if (select === null) return;
     setHasSubmit(true); // 제출 상태 설정
@@ -46,9 +68,8 @@ export default function QuizPage() {
     setShowModal(false); // 모달 닫기
   }, []);
 
-  const { category, scenario: scenarioId, chapter } = useParams();
   const quiz = useMemo(() => dinoQuiz[parseInt(chapter as "")], [chapter]);
-  
+
   const handleFinish = useCallback(() => {
     // router.back(); // 뒤로 가기
     const intChapter = parseInt(chapter as string);
