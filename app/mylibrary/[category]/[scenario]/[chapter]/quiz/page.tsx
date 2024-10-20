@@ -23,9 +23,9 @@ const Modal = ({
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-0 right-0 w-1/3 h-full bg-white shadow-lg p-4 flex flex-col items-center justify-center">
-      <h2 className="text-2xl font-bold mb-4">오답입니다!</h2>
-      <p className="mb-4">{explanation}</p> {/* 해석 표시 */}
+    <div className=" fixed top-0 right-0 w-1/3 h-full bg-white shadow-lg p-4 flex flex-col items-center justify-center">
+      <h2 className="text-point text-2xl font-bold mb-4">오답입니다!</h2>
+      <p className="mb-4 text-normal">{explanation}</p> {/* 해석 표시 */}
       <Button text="닫기" onClick={onClose} />
     </div>
   );
