@@ -29,7 +29,7 @@ export const scenarios: Record<string, Scenario[]> = {
                 '대공룡시대, 백악기',
                 '바이바이, 공룡'
             ],
-            progress: 100,
+            progress: 0,
         },
         {
             id: 1,
