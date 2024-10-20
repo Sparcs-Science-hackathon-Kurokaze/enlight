@@ -4,7 +4,7 @@ export default function BackButton() {
   const router = useRouter();
 
   const goBack = () => {
-    router.back(); // 이전 페이지로 이동
+    router.push('/mylibrary');// 이전 페이지로 이동
   };
 
   return (
