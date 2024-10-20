@@ -1,5 +1,4 @@
 "use client";
-import BackButton from "@/components/atom/BackBotton";
 import LogoutButton from "@/components/atom/LogOutButton";
 import PageTitle from "@/components/atom/PageTitle";
 import IconItem from "@/components/molecule/IconItem";

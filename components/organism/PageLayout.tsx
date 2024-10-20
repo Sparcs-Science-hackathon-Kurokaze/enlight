@@ -29,5 +29,5 @@ const PageLayout = React.forwardRef<HTMLDivElement, PageLayoutProps>(
     );
   }
 );
-
+PageLayout.displayName = "PageLayout";
 export default PageLayout;

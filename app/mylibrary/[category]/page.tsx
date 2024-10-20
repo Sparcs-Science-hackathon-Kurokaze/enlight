@@ -30,7 +30,6 @@ export default function CategoryPage() {
       </div>
       <div className="grid grid-cols-3 gap-10 px-50">
         {categoryItems.map((chapter, i) => {
-          chapter.chapters.length;
           const store_chapter = localStorage.getItem(`${category}/${i}`);
           const int_store_chapter = parseInt(store_chapter ?? "0");
           const progress = (int_store_chapter / chapter.chapters.length) * 100;
