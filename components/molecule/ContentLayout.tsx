@@ -27,17 +27,21 @@ export default function ContentRenderer({
         if (content.startsWith("title:")) {
           return (
             <div
-              className="text-32pt mt-24 font-noto font-bold text-point h-12"
+              className="text-32pt mt-24 font-noto font-bold text-point min-h-12 text-center"
               key={content}
             >
-              {content.replace("title:","")}
+              {content.replace("title:", "")}
             </div>
           );
         }
 
+        if (content.startsWith("exampleImg:")) {
+          return <img className="h-24" src="/example.png" key={content} />;
+        }
+
         return (
           <div
-            className="text-32pt font-noto font-bold text-point h-12"
+            className="text-32pt font-noto font-bold text-point min-h-12 text-center"
             key={content}
           >
             {content}

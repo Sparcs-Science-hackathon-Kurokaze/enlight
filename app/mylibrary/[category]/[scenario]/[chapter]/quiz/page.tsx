@@ -2,7 +2,7 @@
 import Button from "@/components/atom/Button";
 import PageTitle from "@/components/atom/PageTitle";
 import { dinoQuiz } from "@/constants/quiz";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { useParams, useRouter } from "next/navigation"; // 뒤로 가기를 위한 useRouter
 
 const alphabet = ["A", "B", "C", "D"];
@@ -32,7 +32,6 @@ export default function QuizPage() {
   const [select, setSelect] = useState<number | null>(null);
   const [hasSubmit, setHasSubmit] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false); // 모달 상태
-  const quiz = dinoQuiz;
   const router = useRouter(); // 뒤로 가기를 위한 라우터
 
   const handleSubmit = useCallback(() => {
@@ -48,6 +47,8 @@ export default function QuizPage() {
   }, []);
 
   const { category, scenario: scenarioId, chapter } = useParams();
+  const quiz = useMemo(() => dinoQuiz[parseInt(chapter as "")], [chapter]);
+  
   const handleFinish = useCallback(() => {
     // router.back(); // 뒤로 가기
     const intChapter = parseInt(chapter as string);
@@ -99,7 +100,7 @@ export default function QuizPage() {
                 if (hasSubmit) return;
                 setSelect(i);
               }}
-              className={`${bgColor} ${txColor} text-24pt -text w-72 py-2 font-noto font-bold rounded-2xl flex justify-center items-center`}
+              className={`${bgColor} ${txColor} text-24pt -text px-8 min-w-72 py-2 font-noto font-bold rounded-2xl flex justify-center items-center`}
             >
               {alphabet[i]}.{c} {display}
             </div>

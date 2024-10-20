@@ -17,10 +17,10 @@ export const dinoChapter = [
             "대표적 연골어류인 암모나이트, 크세나간투스, ",
             "img:1.png",
             "초기 해양 파충류 카토린쿠스"
-        ], 
+        ],
         [
-            "title:트라이아스기 초기", 
-            "육지에서는 폐름기 대멸종에서 살아남은", 
+            "title:트라이아스기 초기",
+            "육지에서는 폐름기 대멸종에서 살아남은",
             "원시 양서류와 단궁류가 살고 있었습니다.",
             "img:0.png",
             "단궁류 디메트로돈과 리스트로 사우르스"
@@ -28,127 +28,111 @@ export const dinoChapter = [
     ],
     [
         [
-            "title:초기 공룡의 등장",
             "초기 공룡은 약 2억 4000만 년 전에 등장했습니다.",
-            "img:early_dinosaurs.png", // 니아사사우루스, 에오랍토르, 헤레라사우루스 이미지
+            "exampleImg:early_dinosaurs.png", // 니아사사우루스, 에오랍토르, 헤레라사우루스 이미지
             "당시 이들 공룡은 전체 생물종의 약 6%에 불과했으며,",
             "2억 3200만 년 전 발생한 카르니안절 우기 사건으로 인해 많은 동물이 멸종했습니다.",
-            "img:carnian_event.png" // 카르니안절 우기 사건 이미지
+            "exampleImg:carnian_event.png" // 카르니안절 우기 사건 이미지
         ],
         [
             "title:카르니안절 우기 사건과 공룡의 번성",
             "그러나 이 사건은 공룡이 번성하는 계기가 되었고,",
             "뻗은 다리 구조와 기낭을 통해 건조하고 산소가 희박한 환경에서 생존할 수 있었습니다.",
-            "img:dinosaur_features.png" // 공룡 특징이 보이는 이미지
+            "exampleImg:dinosaur_features.png" // 공룡 특징이 보이는 이미지
         ],
         [
             "title:트라이아스기 후기 공룡의 번성",
             "트라이아스기 후기에 공룡은 전체 생물종의 90%까지 증가했으며,",
-            "img:many_dinosaurs.png", // 공룡이 많은 이미지
+            "exampleImg:many_dinosaurs.png", // 공룡이 많은 이미지
             "용반목 공룡이 주류를 이루었고, 육식성 수각류와 초식성 용각류로 분화되었습니다."
         ]
     ],
     [
         [
-            "title:익룡의 등장",
             "파충류 중 일부는 팔 주변의 피부막을 확장시켰고,",
             "하늘을 나는 익룡이 등장했습니다.",
-            "img:early_pterosaurs.png", // 에우니모르포돈, 카비라무스, 프레온닥틸루스, 페테이노사우루스 이미지
+            "exampleImg:early_pterosaurs.png" // 에우니모르포돈, 카비라무스, 프레온닥틸루스, 페테이노사우루스 이미지
         ],
         [
             "title:익룡과 공룡의 차이",
             "익룡은 공룡이 아닌데, 공룡은 골반의 구멍에 허벅지뼈가 들어가지만,",
             "익룡은 골반의 움푹 들어간 곳에 허벅지뼈가 있습니다.",
-            "img:pterosaur_vs_dinosaur_pelvis.png", // 공룡과 익룡의 골반 비교 이미지
+            "exampleImg:pterosaur_vs_dinosaur_pelvis.png" // 공룡과 익룡의 골반 비교 이미지
         ],
         [
             "title:익룡과 해양 파충류의 초기 진화",
             "초기 익룡들은 매우 작아 새와 비슷한 크기를 가졌습니다.",
-            "img:small_pterosaurs.png", // 초기 익룡 이미지
+            "exampleImg:small_pterosaurs.png", // 초기 익룡 이미지
             "또한, 2억 3000만 년 전 일부 해양 파충류는",
             "플레시오사우루스와 같은 수장룡으로 진화하였습니다.",
-            "img:plesiosaur.png" // 플레시오사우루스 이미지
+            "exampleImg:plesiosaur.png" // 플레시오사우루스 이미지
         ]
     ],
     [
         [
-            "title:트라이아스기 대멸종",
             "약 2억 100만 년 전 판게아 대륙이 분화하면서 온실가스가 증가했고,",
             "이로 인해 트라이아스기 대멸종이 발생했습니다.",
-            "img:pangaea_split.png", // 판게아가 나뉘는 이미지
-            "대형 양서류, 단궁류, 일부 파충류가 멸종하였고,",
+            "exampleImg:pangaea_split.png" // 판게아가 나뉘는 이미지
+        ],
+        [
+            "title:트라이아스기 대멸종",
+            "대형 양서류, 단궁류 등이 멸종하였고,",
             "공룡 중에서는 용반목과 조반목이 남아 조반목 공룡이 다양화되었습니다.",
-            "img:saurischia_ornithischia.png" // 용반목과 조반목 이미지
+            "exampleImg:saurischia_ornithischia.png" // 용반목과 조반목 이미지
         ],
         [
             "title:조반목 공룡의 다양화",
             "조반목 공룡의 치골은 뒤쪽으로 향해 소화기관이 커졌고,",
             "이로 인해 먹이 경쟁에서 유리하게 되었습니다.",
-            "img:ornithischian_pelvis.png", // 조반목의 골반 이미지
+            "exampleImg:ornithischian_pelvis.png" // 조반목의 골반 이미지
+        ],
+        [
             "조반목 공룡의 예시들이 다양하게 등장했습니다.",
-            "img:ornithischian_examples.png" // 조반목 공룡의 예시 이미지
+            "exampleImg:ornithischian_examples.png" // 조반목 공룡의 예시 이미지
+        ]
+    ],
+    [
+        [
+            "백악기 후기에 산소 농도가 증가하면서 거대 용각류인 브라키오사우루스와 기라파티탄이 출현했으며,",
+            "그 천적인 수각류도 커졌습니다. 대표적으로 알로사우루스가 있습니다.",
+            "exampleImg:brachiosaurus_allosaurus.png" // 브라키오사우루스, 기라파티탄, 알로사우루스 이미지
         ],
         [
             "title:백악기 후기 공룡의 번성",
-            "백악기 후기에 산소 농도가 증가하면서 거대 용각류인 브라키오사우루스와 기라파티탄이 출현했으며,",
-            "그 천적인 수각류도 커졌습니다. 대표적으로 알로사우루스가 있습니다.",
-            "img:brachiosaurus_allosaurus.png", // 브라키오사우루스, 기라파티탄, 알로사우루스 이미지
             "쥐라기 후기에는 깃털을 가진 수각류가 등장했습니다.",
-            "img:feathered_theropods.png" // 안키올니스, 카이홍주지 이미지
-        ]
-    ],
-    [
+            "exampleImg:feathered_theropods.png" // 안키올니스, 카이홍주지 이미지
+        ],
         [
             "title:백악기 생물의 세분화",
             "백악기에는 대륙이 분화되면서 공룡 종들이 점차 세분화되었습니다.",
-            "img:flower_butterfly.png", // 꽃과 나비 이미지
+            "exampleImg:flower_butterfly.png" // 꽃과 나비 이미지
+        ],
+        [
+            "title:백악기 생물의 세분화",
             "이 시기 속씨식물과 꽃이 등장하면서 곤충과 협력해 번식에 성공했습니다.",
             "꽃과 함께 백악기 원시 나비목도 번성했습니다."
-        ],
-        [
-            "title:뿔공룡과 용각류의 번성",
-            "검룡류는 쇠퇴하였지만, 곡룡류와 뿔공룡은 번성했습니다.",
-            "img:triceratops.png", // 트리케라톱스 이미지
-            "뿔공룡의 친척 후두류가 번성했고,",
-            "img:pachycephalosaurus.png", // 파키케팔로사우루스 이미지
-            "거대 용각류는 멸종했으나 아르겐티나사우루스 같은 초거대 용각류가 출현하기도 했습니다.",
-            "img:argentinosaurus.png", // 아르겐티나사우루스 이미지
-            "산소 농도의 증가로 인해 익룡의 크기도 커졌으며, 케찰코아틀루스는 기린만큼 큰 키에 날개는 10m에 달했습니다.",
-            "img:quetzalcoatlus.png" // 케찰코아틀루스 이미지
-        ],
-        [
-            "title:백악기 후기의 육지와 해양 생물",
-            "수각류 중에서는 티라노사우루스를 비롯해 시피노사우루스, 기가노토사우루스 등이 번성했습니다.",
-            "img:theropods.png", // 티라노사우루스와 다른 수각류 이미지
-            "또한, 작은 수각류를 잡아먹는 베엘제부포 같은 커다란 양서류도 존재했습니다.",
-            "img:beelzebufo.png", // 베엘제부포 이미지
-            "이구아노돈류는 육지 연결을 통해 유럽에서 아시아와 북아메리카로 진출했고,",
-            "뿔공룡과 티라노사우루스는 아시아에서 아메리카로 건너가 대형종으로 진화했습니다.",
-            "img:iguanodon_migration.png", // 이구아노돈의 지도 이미지
-            "대표적으로 사우롤로푸스는 몽골, 중국, 캐나다, 미국에서 동시에 발견된 공룡입니다.",
-            "img:saurolophus.png", // 사우롤로푸스 이미지
-            "바다에서는 모사사우루스와 같은 해양 파충류가 번성했습니다.",
-            "img:mosasaurus.png" // 모사사우루스 이미지
         ]
     ],
     [
         [
-            "title:소행성 충돌과 대멸종",
             "약 6500만 년 전, 지구에 소행성이 충돌하면서 대멸종이 일어났습니다.",
-            "img:asteroid_impact.png", // 소행성 충돌 이미지
+            "exampleImg:asteroid_impact.png" // 소행성 충돌 이미지
+        ],
+        [
+            "title:소행성 충돌과 대멸종",
             "대부분의 공룡이 멸종했으나, 수각류 일부는 새로 진화하여 살아남았습니다.",
-            "img:chicken.png" // 현생 조류의 예로 닭 이미지
+            "exampleImg:chicken.png" // 현생 조류의 예로 닭 이미지
         ],
         [
             "title:수각류의 진화와 '석형류'",
             "파충류와 새를 합쳐 '석형류'라고 부르며,",
             "이후 신생대에 공포새와 같은 거대한 새들이 출현했습니다.",
-            "img:reptile_dinosaur_bird_diagram.png" // 파충류, 공룡, 조류의 진화 다이어그램
+            "exampleImg:reptile_dinosaur_bird_diagram.png" // 파충류, 공룡, 조류의 진화 다이어그램
         ],
         [
             "title:신생대의 거대한 새들",
             "하늘은 맹금류가 차지했고, 아르겐타비스 같은 거대한 새가 나타났습니다.",
-            "img:argentavis.png" // 아르겐타비스 이미지
+            "exampleImg:argentavis.png" // 아르겐타비스 이미지
         ]
     ]
 ];

@@ -18,17 +18,18 @@ export default function ChapterPage() {
 
   const pageRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+  const pages = useMemo(() => dinoChapter[parseInt(chapter as "0")], [chapter]);
+  const viewPages = useMemo(
+    () => pages.filter((_, i) => i <= current),
+    [current, pages]
+  );
+
   const toNextPage = useCallback(() => {
-    if (current + 1 === dinoChapter.length) {
+    if (current + 1 === pages.length) {
       router.push(`/mylibrary/${category}/${scenarioId}/${chapter}/quiz`);
     }
     setCurrent((prev) => prev + 1);
-  }, [pageRefs, current]);
-
-  const pages = useMemo(
-    () => dinoChapter.filter((_, i) => i <= current),
-    [current]
-  );
+  }, [pageRefs, current, pages]);
 
   useEffect(() => {
     const nextPageRef = pageRefs.current[pageRefs.current.length - 1];
@@ -39,13 +40,13 @@ export default function ChapterPage() {
 
   return (
     <div className="w-screen min-h-screen flex flex-col items-center bg-base font-sans">
-      {pages.map((contents, i) => (
+      {viewPages.map((contents, i) => (
         <PageLayout
           key={i}
           current={current}
           pageIndex={i}
           toNextPage={toNextPage}
-          pageLength={dinoChapter.length}
+          pageLength={pages.length}
           ref={(el) => {
             pageRefs.current[i] = el;
           }}
